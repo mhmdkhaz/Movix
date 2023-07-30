@@ -58,7 +58,7 @@ function InfromationMovieTv({ dataUrl }) {
                   progres={dataUrl?.vote_average}
                   className="text-white"
                 >
-                  {dataUrl?.vote_average}
+                  {dataUrl?.vote_average?.toFixed(1)}
                 </Progress>
               </div>
               <div className="play flex justify-center items-center">
@@ -147,15 +147,15 @@ const Progress = styled.span`
     ),
     conic-gradient(
       ${(props) => {
-        if (`${props.progres * 10}%` >= "75%") {
+        if (`${props.progres?.toFixed(1) * 10}%` >= "75%") {
           return "green";
-        } else if (`${props.progres * 10}%` >= "50%") {
+        } else if (`${props.progres.toFixed(1) * 10}%` >= "50%") {
           return "orange";
         } else {
           return "red";
         }
       }},
-      ${(props) => `${props.progres * 10}%`},
+      ${(props) => `${props.progres?.toFixed(1) * 10}%`},
       white 0
     );
 `;
