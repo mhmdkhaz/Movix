@@ -14,8 +14,6 @@ function Search() {
     `&query=${valueSearch}`
   );
 
-  console.log(dataSearch);
-
   return (
     <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
       {dataSearch && Array.isArray(dataSearch) && dataSearch.length > 0 ? (

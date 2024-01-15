@@ -5,6 +5,7 @@ import { MediatMovieTv } from "../Hooks/UseContextApp";
 
 export const MyContext = createContext();
 
+
 function ConteinerSliderItems({
   firstUrl,
   secondUrl,
